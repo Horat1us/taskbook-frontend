@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "jsx": "react",
+    "sourceMap": true,
+    "removeComments": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true
+  },
+  "include": [
+      "./tests/acceptance/*"
+  ],
+  "exclude": [
+    "./node_modules/**/*"
+  ]
+}

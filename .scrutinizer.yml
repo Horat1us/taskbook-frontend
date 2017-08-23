@@ -1,0 +1,35 @@
+# Config for scrutinizer-ci.com
+checks:
+  javascript: true
+
+filter:
+  excluded_paths:
+    - tests/*
+
+build:
+  project_setup:
+    after:
+      - APACHE=1 npm run build
+
+  tests:
+    override:
+      - npm run unit
+      - NODE_ENV=scrutinizer npm run e2e
+
+  environment:
+    postgresql: false
+    redis: false
+    selenium: true
+
+    hosts:
+      frontend.local: '127.0.0.1'
+
+    apache2:
+      modules: ['rewrite']
+      sites:
+        frontend:
+          web_root: 'web/'
+          host: 'frontend.local'
+          rules:
+            - 'RewriteCond %{REQUEST_FILENAME} !-f'
+            - 'RewriteRule ^(.*)$ index.html [QSA,L]'

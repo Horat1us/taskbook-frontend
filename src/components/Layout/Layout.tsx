@@ -1,5 +1,6 @@
 import * as React from "react";
 import {LayoutProps, LayoutPropTypes} from "./LayoutProps"
+import {TaskForm} from "../Form/TaskForm";
 
 export class Layout extends React.Component<LayoutProps, undefined> {
     public static propTypes = LayoutPropTypes;
@@ -17,6 +18,10 @@ export class Layout extends React.Component<LayoutProps, undefined> {
     }
 
     public render() {
-        return <span>Hello, World!</span>;
+        return (
+            <div className="container">
+                <TaskForm/>
+            </div>
+        );
     }
 }

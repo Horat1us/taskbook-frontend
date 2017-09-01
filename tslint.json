@@ -16,6 +16,7 @@
     "jsx-no-string-ref": true,
     "jsx-self-close": true,
     "jsx-wrap-multiline": true,
+    "jsx-boolean-value": false,
     "no-magic-numbers": true,
     "no-reference": true,
     "curly": true,
@@ -25,6 +26,7 @@
     "no-invalid-this": true,
     "no-null-keyword": true,
     "no-var-keyword": true,
+    "no-var-requires": false,
     "triple-equals": true,
     "typeof-compare": true,
     "max-classes-per-file": [
@@ -56,6 +58,7 @@
     "space-within-parens": false,
     "object-literal-sort-keys": false,
     "ordered-imports": false,
-    "no-unused-expression": false
+    "no-unused-expression": false,
+    "import-spacing": false
   }
 }

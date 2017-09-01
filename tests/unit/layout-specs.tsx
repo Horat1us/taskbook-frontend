@@ -6,14 +6,6 @@ import {Layout, PreLoader} from "../../src/components";
 import {PreLoaderInterface} from "../../src/components/Preloader/PreLoaderInterface";
 
 describe("<Layout />", () => {
-    it("Should render `Hello, World!`", () => {
-        const wrapper = mount(
-            <Layout/>
-        );
-
-        expect(wrapper.getDOMNode().innerHTML).to.contain("Hello, World!");
-    });
-
     it("Should hide and show preloader on mount/unmount", () => {
         const element = document.createElement("div");
         const preLoader: PreLoaderInterface = new PreLoader(element);

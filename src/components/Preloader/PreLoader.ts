@@ -1,7 +1,7 @@
 import {sleep} from "../../helpers/sleep";
 import {PreLoaderInterface} from "./PreLoaderInterface";
 
-const preLoaderAnimationDuration = 500;
+const preLoaderAnimationDuration = 750;
 
 /**
  * This class represents animations on plain DOM element because
